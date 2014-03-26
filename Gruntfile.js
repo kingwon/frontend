@@ -15,7 +15,16 @@ module.exports = function(grunt) {
                 //源文件
                 src: 'bootstrap-dist/js/bootstrap.js',
                 //目标文件
-                dest: 'JS/lib.js'
+                dest: 'JS/libs.js'
+            }
+        },
+        //编译less
+        less: {
+            build: {
+                //源文件
+                src: 'CSS/base.less',
+                //目标文件
+                dest: 'CSS/base.css'
             }
         },
 
@@ -28,9 +37,17 @@ module.exports = function(grunt) {
             //具体任务配置
             build: {
                 //源文件
-                src: 'bootstrap-dist/css/bootstrap.css',
+                src: ['bootstrap-dist/css/bootstrap.css', 'CSS/base.css'],
                 //目标文件
-                dest: 'CSS/base.css'
+                dest: 'CSS/libs.css'
+            }
+        },
+        
+        //监控文件变化，自动运行任务
+        watch: {
+            scripts: {
+                files: ['CSS/*/*.less'],
+                tasks: ['css']
             }
         }
     });
@@ -39,7 +56,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 默认执行的任务
-    grunt.registerTask('default', ['uglify', 'cssmin']);
+    //编译，压缩css
+    grunt.registerTask('css', ['less', 'cssmin']);
+    grunt.registerTask('js', 'uglify');
+    grunt.registerTask('default', ['css', 'js']);
 };
