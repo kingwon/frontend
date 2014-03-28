@@ -46,7 +46,7 @@ module.exports = function(grunt) {
         //监控文件变化，自动运行任务
         watch: {
             scripts: {
-                files: ['CSS/*/*.less'],
+                files: ['CSS/*/*.less', 'CSS/*.less'],
                 tasks: ['css']
             }
         }

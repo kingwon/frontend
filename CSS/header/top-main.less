@@ -1,25 +1,39 @@
+@innerHeight:70px;
+@logoHeight:47px;
+
 .top-main{
     background-color:#ff4400;
-    @innerHeight:70px;
     .top-main-inner{
-        width:@innerWidth;
+        width: @innerWidth;
         margin:0 auto;
-        height:@innerHeight;
-        line-height: @innerHeight;
-        @logoHeight:47px;
+        .height(@innerHeight);
         .logo{
-            
             float: left;
-            z-index: 10;
-            height: @logoHeight;
-            line-height: @logoHeight;
+            .height(@logoHeight);
             width: 260px;
             overflow: hidden;
-            // vertical-align:middle;
             margin-top: (@innerHeight - @logoHeight) / 2;
             a{
-                vertical-align:top;
-                border: 0 none;
+                img{
+                    vertical-align: top;
+                }
+            }
+        }
+        .send{
+            float: right;
+            background: #D92901;
+            height: @innerHeight;
+            width: 108px;
+            a{
+                .defaultA;
+                // margin-left: 
+                i{
+                    width: 20px;
+                    height: 20px;
+                    margin: 25px 4px 0px 15px;
+                    float: left;
+                    background: url(../public/images/sp.png) no-repeat -67px 0;
+                }
             }
         }
     }

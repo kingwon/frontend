@@ -1,10 +1,19 @@
-@color:#fff;
+@color : #fff;
+.defaultA () {
+    text-decoration:none;
+    color:@color;
+}
+.height(@height:75px){
+    height: @height;
+    line-height: @height;
+}
+
+
 .top-bar{
     background:#3F4246;
     color:@color;
     a{
-        text-decoration:none;
-        color:@color;
+      .defaultA;
     }
     .top-bar-inner{
         .mobile{
@@ -15,7 +24,8 @@
               overflow: hidden;
               vertical-align: top;
               width: 10px;
-              height: 12px;
+              // height: 12px;
+              .height(12px);
               background-position: -52px -2px;
               float: left;
               margin: 6px 6px 0 0;
@@ -23,8 +33,9 @@
         }
         width:@innerWidth;
         margin: 0 auto;
-        height:25px;
-        line-height:25px;
+        // height:25px;
+        // line-height:25px;
+        .height(25px);
         .top-bar-nav{
           float:right;
           .separater{
