@@ -1,9 +1,26 @@
 .top-main{
     background-color:#ff4400;
+    @innerHeight:70px;
     .top-main-inner{
         width:@innerWidth;
         margin:0 auto;
-        height:70px;
-        line-height: 70px;
+        height:@innerHeight;
+        line-height: @innerHeight;
+        @logoHeight:47px;
+        .logo{
+            
+            float: left;
+            z-index: 10;
+            height: @logoHeight;
+            line-height: @logoHeight;
+            width: 260px;
+            overflow: hidden;
+            // vertical-align:middle;
+            margin-top: (@innerHeight - @logoHeight) / 2;
+            a{
+                vertical-align:top;
+                border: 0 none;
+            }
+        }
     }
 }

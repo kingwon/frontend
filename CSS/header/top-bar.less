@@ -1,8 +1,10 @@
+@color:#fff;
 .top-bar{
     background:#3F4246;
+    color:@color;
     a{
-        color: #fff;
         text-decoration:none;
+        color:@color;
     }
     .top-bar-inner{
         .mobile{
@@ -23,6 +25,17 @@
         margin: 0 auto;
         height:25px;
         line-height:25px;
+        .top-bar-nav{
+          float:right;
+          .separater{
+            color: #999;
+            padding: 0 6px;
+          }
+          span{
+            float: left;
+            margin-right: 8px;
+          }
+        }
     }
     
 }
