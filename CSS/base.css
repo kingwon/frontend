@@ -1,3 +1,10 @@
+html,
+body {
+  font-family: '微软雅黑', '宋体', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  background-color: #F4F4F4;
+}
 .top-bar {
   background: #3F4246;
   color: #ffffff;
@@ -67,6 +74,9 @@
 .top-main .top-main-inner .send a {
   text-decoration: none;
   color: #ffffff;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
 }
 .top-main .top-main-inner .send a i {
   width: 20px;
@@ -84,9 +94,68 @@
   position: absolute;
   bottom: 0px;
 }
-.left {
+.nav {
   width: 200px;
   float: left;
+}
+.nav .nav-item {
+  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid #ffffff;
+  padding: 10px 0;
+  display: block;
+}
+.nav .nav-item .nav-link {
+  font-size: 14px;
+  font-family: '宋体';
+  color: #666666;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+}
+.nav .nav-item .lev-1 {
+  padding-left: 32px;
+  font-weight: bold;
+}
+.nav .nav-item .lev-2 {
+  padding-left: 57px;
+}
+.nav .nav-item .current {
+  background-color: #ABB3BE;
+  color: #ffffff;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+}
+.nav .nav-item .current i {
+  background-position: -26px 0;
+}
+.nav i {
+  background: url(../public/images/sp.png) no-repeat 200em 0;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  float: left;
+  margin-right: 3px;
+  margin-top: 9px;
+  width: 21px;
+  height: 16px;
+}
+.nav .nav-home i {
+  background-position: 0 0;
+}
+.nav .nav-house i {
+  background-position: 0 -21px;
+}
+.nav .nav-customer i {
+  background-position: 0 -42px;
+}
+.nav .nav-commission i {
+  background-position: 0 -63px;
+}
+.nav .nav-account i {
+  background-position: 0 -85px;
 }
 .right {
   width: 978px;
@@ -103,10 +172,4 @@
   margin: 0 auto;
   width: 1180px;
   height: auto ;
-}
-html,
-body {
-  font-family: '微软雅黑', '宋体', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
 }

@@ -5,7 +5,8 @@ $file = substr($uri, strpos($uri, '/') + 1);
 if(false !== $file){
     include $file . '.html';
 }else{
-    echo "<body><p>my first frontend</p></body>";
+    // echo "<body><p>my first frontend</p></body>";
+    include 'list.html';
 }
 include 'footer.html';
 

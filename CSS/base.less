@@ -1,14 +1,28 @@
-@import 'header/header.less';
-@import 'footer/footer.less';
-@import 'list/list.less';
 
 html,
 body {
     font-family: '微软雅黑','宋体',"Helvetica Neue", Helvetica, Arial, sans-serif !important;
     height: 100%; /* The html and body elements cannot have any padding or margin. */
+    background-color: #F4F4F4;
 }
-// body,html,div{
-//     margin: 0px;
-//     padding: 0px;
-//     border: 0;
+// .border-radius(@leftUp:15px;,){
+//     border-radius:
 // }
+
+.rounded-corners (@radius: 10px 0 0 10px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.i-position (@position: 0 0;){
+    i{
+        background-position: @position;
+    }
+}
+
+@import 'header/header.less';
+@import 'footer/footer.less';
+@import 'list/list.less';

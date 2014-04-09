@@ -1,5 +1,65 @@
 @leftWidth: 200px;
-.left{
+.nav{
     width: @leftWidth;
     float: left;
+    .nav-item{
+        border-bottom: 1px solid #D9D9D9;
+        border-top: 1px solid #ffffff;
+        padding: 10px 0;
+        display: block;
+        .nav-link{
+            font-size: 14px;
+            font-family: '宋体';
+            color:  #666666;
+            display: block;
+            .height(34px);
+        }
+        .lev-1{
+            padding-left: 32px;
+            font-weight: bold;
+        }
+        .lev-2{
+            // padding-top: 23px;
+            padding-left: 57px;
+        }
+        .current{
+            background-color: #ABB3BE;
+            color: #ffffff;
+            i{
+                background-position: -26px 0;
+            }
+            .rounded-corners;
+        }
+    }
+    i{
+        background: url(../public/images/sp.png) no-repeat 200em 0;
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        float: left;
+        margin-right: 3px;
+        margin-top: 9px;
+        width: 21px;
+        height: 16px;
+    }
+    .nav-home{
+        .i-position;
+    }
+    
+    .nav-house{
+        .i-position(0 -21px);
+    }
+    
+    .nav-customer{
+        .i-position(0 -42px);
+    }
+    
+    .nav-commission{
+        .i-position(0 -63px);
+    }
+    
+    .nav-account{
+        .i-position(0 -85px);
+    }
+
 }
